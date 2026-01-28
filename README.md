@@ -34,6 +34,8 @@ The entry point is `main.js`: this script validates the payload, cleans the data
 
 * **string-utils.js**: supplies the raw Levenshtein/LCS helpers, **json-utils.js** handles resilient body parsing, and **prompts.js** stores the frozen few-shot prompts.
 
+* **forsta-tracker.js**: Helper script for running Alias on Decipher surveys. Note that if you want to use FingerprintJS, you must replace the Fingerprint link with your account's link.
+
 The overall pattern is that `main.js` orchestrates a set of narrowly focused helpers, and duplicate matching is chunked and executed in parallel workers so a large survey cannot block the rest of the pipeline.
 
 ```
